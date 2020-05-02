@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">AppChallenge01</string>
+    <string name="inpN">Nama</string>
+    <string name="inpU">Umur</string>
+    <string name="inpE">Email</string>
+    <string name="inpT">Telp</string>
+    <string name="inpA">Alamat</string>
+    <string-array name="jenisK">
+        <item>Jenis Kelamin</item>
+        <item>Laki-Laki</item>
+        <item>Perempuan</item>
+    </string-array>
 </resources>
