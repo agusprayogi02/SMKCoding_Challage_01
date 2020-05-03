@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AppChallenge01</string>
+    <string name="app_name">App Bio</string>
     <string name="inpN">Nama</string>
     <string name="inpU">Umur</string>
     <string name="inpE">Email</string>
