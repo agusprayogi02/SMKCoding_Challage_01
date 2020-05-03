@@ -6,7 +6,7 @@
     <string name="inpT">Telp</string>
     <string name="inpA">Alamat</string>
     <string-array name="jenisK">
-        <item>Jenis Kelamin</item>
+        <item>Pilih Jenis Kelamin</item>
         <item>Laki-Laki</item>
         <item>Perempuan</item>
     </string-array>
