@@ -2,5 +2,5 @@
 <resources>
     <dimen name="mver">5dp</dimen>
     <dimen name="mHor">10dp</dimen>
-    <dimen name="tb">18sp</dimen>
+    <dimen name="tb">14sp</dimen>
 </resources>

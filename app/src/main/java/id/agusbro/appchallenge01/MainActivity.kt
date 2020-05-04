@@ -18,32 +18,7 @@ class MainActivity : AppCompatActivity() {
         setSpinner()
 
         simpan.setOnClickListener {
-            val nama = inpnama.text.toString()
-            val email = inpemail.text.toString()
-            val telp = inpTelp.text.toString()
-            val alamat = inpAlamat.text.toString()
-            val Jk = jenisKl.selectedItem.toString()
-
-            when {
-                nama.isEmpty() -> {
-                    inpnama.error = "Nama Tidak Boleh Kosong"
-                }
-                Jk.equals("Pilih Jenis Kelamin", true) -> {
-                    ShowToast("Silakan Pilih Jenis Kelamin")
-                }
-                email.isEmpty() -> {
-                    inpemail.error = "Email Tidak Boleh Kosong"
-                }
-                telp.isEmpty() -> {
-                    inpTelp.error = "Telp Tidak Boleh Kosong"
-                }
-                alamat.isEmpty() -> {
-                    inpAlamat.error = "Alamat Tidak Boleh Kosong"
-                }
-                else -> {
-                    Simpan()
-                }
-            }
+            Simpan()
         }
     }
 
@@ -52,8 +27,43 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun Simpan() {
-        val i = Intent(this, ProfilActivity::class.java)
-        startActivity(i)
+        val nama = inpnama.text.toString()
+        val email = inpemail.text.toString()
+        val telp = inpTelp.text.toString()
+        val alamat = inpAlamat.text.toString()
+        val umur = inpumur.text.toString()
+        val Jk = jenisKl.selectedItem.toString()
+
+        when {
+            nama.isEmpty() -> {
+                inpnama.error = "Nama Tidak Boleh Kosong"
+            }
+            Jk.equals("Pilih Jenis Kelamin", true) -> {
+                ShowToast("Silakan Pilih Jenis Kelamin")
+            }
+            email.isEmpty() -> {
+                inpemail.error = "Email Tidak Boleh Kosong"
+            }
+            telp.isEmpty() -> {
+                inpTelp.error = "Telp Tidak Boleh Kosong"
+            }
+            alamat.isEmpty() -> {
+                inpAlamat.error = "Alamat Tidak Boleh Kosong"
+            }
+            umur.isEmpty()->{
+                inpumur.error = "Umur Tidak Boleh Kosong"
+            }
+            else -> {
+                val i = Intent(this, ProfilActivity::class.java)
+                i.putExtra("nama", nama)
+                i.putExtra("jenisKl", Jk)
+                i.putExtra("email", email)
+                i.putExtra("umur", umur)
+                i.putExtra("telp",telp)
+                i.putExtra("alamat", alamat)
+                startActivity(i)
+            }
+        }
     }
 
     private fun setSpinner() {
