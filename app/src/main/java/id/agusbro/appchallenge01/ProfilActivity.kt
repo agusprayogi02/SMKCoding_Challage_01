@@ -13,12 +13,17 @@ class ProfilActivity : AppCompatActivity() {
         setContentView(R.layout.activity_profil)
 
         val bundle = intent.extras
-        tnama.text = " : " + bundle!!.getString("nama")
-        tjk.text = " : " + bundle.getString("jenisKl")
-        tumur.text = " : " + bundle.getString("umur")
-        ttelp.text = " : " + bundle.getString("telp")
-        tamt.text = " : " + bundle.getString("alamat")
-        temail.text = " : " + bundle.getString("email")
+        tnama.text = "  :  " + bundle!!.getString("nama")
+        tjk.text = "  :  " + bundle.getString("jenisKl")
+        tumur.text = "  :  " + bundle.getString("umur")+" Tahun"
+        ttelp.text = "  :  " + bundle.getString("telp")
+        tamt.text = "  :  " + bundle.getString("alamat")
+        temail.text = "  :  " + bundle.getString("email")
+        val name = bundle.getString("nama")
+
+        val firstName = name!!.split(" ")
+        judul.text = "Biodata ${firstName[0]}"
+
         edit.setOnClickListener {
             finish()
         }

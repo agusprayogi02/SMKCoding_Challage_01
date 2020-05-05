@@ -2,5 +2,6 @@
 <resources>
     <dimen name="mver">5dp</dimen>
     <dimen name="mHor">10dp</dimen>
-    <dimen name="tb">14sp</dimen>
+    <dimen name="tb">16sp</dimen>
+    <dimen name="maxwidth">170dp</dimen>
 </resources>
